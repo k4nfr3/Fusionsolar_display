@@ -27,24 +27,39 @@ cd /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples
 ## Step 4, clone fusionsolar python client
 git clone https://github.com/EnergieID/FusionSolar  
 
-
 ## Step 4, install required python modules
-
+- pandas
+- PIL
+- requests
+- urllib3
+- socket
+  
 ## Step 5 , enter API details
 change the details in file : pv_conf.ini  
+Fill-in user and password  
 
 ## Step 6, get station_code and device_code
-uncomment lines 222 and 226 and run the python script  
+run manually the script :
+python PV.py  
+It should test the screen and connect with the Northbound API.
+It will show you the devices you have access.
 
 ## Step 7, modify ini file with the correct IDs to be interrogated
+Add the missing information in the config file :
+- Add the Battery ID  (for example : battery=100000000001561112)
+- Add the Inverter ID (for example : inverter=10000000001551111)
+- Add the StationCode (for example : station="NE-12345678")
+  
+## Step 8, test the script and see if you see the correct data on the screen
+python PV.py
 
-## Step 8, create PV service
+## Step 9, transform the script into a PV service
 cp /home/admin/FusionSolar_display/PV.service /usr/lib/systemd/system/PV.service  
 chmod 644 /usr/lib/systemd/system/PV.service  
 systemctl enable PV.service  
 
-## Step 9, add crontab tasks if you want to restart the service daily
-# m h  dom mon dow   command
+## Step 9, add crontab tasks if you want to restart the service daily the service
+# m h  dom mon dow   command  
 59 3 * * * /usr/sbin/service PV stop
 0 3 * * * /usr/sbin/service PV start
 
