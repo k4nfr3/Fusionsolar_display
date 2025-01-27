@@ -15,6 +15,8 @@ To get the data, create a API account
 ## Step 1, generate a new Rasbperry OS on the SD card
 see other forums on how to
 
+[raspberry pi download](https://www.raspberrypi.com/software/operating-systems/)
+
 ## Step 2, clone waveshare SDK
 cd /home/admin  
 git clone https://github.com/waveshareteam/e-Paper
