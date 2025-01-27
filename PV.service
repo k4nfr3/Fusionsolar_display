@@ -1,0 +1,10 @@
+[Unit]
+Description=My PV Display Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples/PV.py
+
+[Install]
+WantedBy=multi-user.target
