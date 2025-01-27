@@ -24,6 +24,10 @@ cd Fusionsolar_display
 cp * /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples  
 cd /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples  
 
+## Step 4, clone fusionsolar python client
+git clone https://github.com/EnergieID/FusionSolar  
+
+
 ## Step 4, install required python modules
 
 ## Step 5 , enter API details
@@ -34,6 +38,20 @@ uncomment lines 222 and 226 and run the python script
 
 ## Step 7, modify ini file with the correct IDs to be interrogated
 
-## Step 8, create autoboot service
+## Step 8, create PV service
+cp /home/admin/FusionSolar_display/PV.service /usr/lib/systemd/system/PV.service  
+chmod 644 /usr/lib/systemd/system/PV.service  
+systemctl enable PV.service  
 
-## Step 9, add crontab tasks
+## Step 9, add crontab tasks if you want to restart the service daily
+# m h  dom mon dow   command
+59 3 * * * /usr/sbin/service PV stop
+0 3 * * * /usr/sbin/service PV start
+
+# Tips
+## Script Log file will be written 
+tail -f /var/log/PV.log  
+
+## Wifi SSHd not working ?
+Add the following to /etc/ssh/sshd_config  
+  IPQoS cs0 cs0
