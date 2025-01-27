@@ -16,6 +16,7 @@ To get the data, create a API account
 see other forums on how to
 
 ## Step 2, clone waveshare SDK
+cd /home/admin  
 git clone https://github.com/waveshareteam/e-Paper
 
 ## Step 3, clone my script
