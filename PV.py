@@ -219,11 +219,14 @@ with PandasClient(user_name=pv_host.user, system_code=pv_host.password) as clien
 
     # token validity is : 30mins so if sleep is less than 30min, then no need to relogin
 
-    #station_code = print_station_code() # uncomment if you need to get the code
+    station_code = pv_host.station 
+    if station_code=="":
+        print("Let's wait 20sec")
+        station_code = print_station_code() # uncomment if you need to get the code
+        print_device_list(station_code) # uncomment if you need to get the device list
+        print("Copy those values to your configuration file ! ")
+        sys.exit(0)
 
-    station_code = pv_host.station # comment if you don't know the station_code
-
-    #print_device_list(station_code) # uncomment if you need to get the device list
 
     table_history = PrettyTable()
     table_history.field_names = ['Timestamp', 'Battery [%]', 'power [KW]']
