@@ -22,7 +22,7 @@ git clone https://github.com/waveshareteam/e-Paper
 ## Step 3, clone my script
 git clone https://github.com/k4nfr3/Fusionsolar_display  
 cd Fusionsolar_display  
-cp * /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples  
+cp *.py /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples  
 cd /home/admin/e-Paper/RaspberryPi_JetsonNano/python/examples  
 
 ## Step 4, clone fusionsolar python client
