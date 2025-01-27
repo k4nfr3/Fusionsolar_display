@@ -2,8 +2,10 @@
 ![box](./waveshare_display.jpeg?raw=true "Little Raspberry Pi Zero + Waveshare 2´´13")
 
 ## Estimated price 23.- CHF
-Around 25$
-I've found this one : [www.berrybase.ch](https://www.berrybase.ch/waveshare-2-13-e-paper-display-fuer-raspberry-pi-zero-5-punkt-touch-250-122-pixel-abs-gehaeuse)
+Cost is around 25$
+I've found this one : [www.berrybase.ch](https://www.berrybase.ch/waveshare-2-13-e-paper-display-fuer-raspberry-pi-zero-5-punkt-touch-250-122-pixel-abs-gehaeuse)  
+
+![box2](./waveshare_display2.jpeg?raw=true "Fairly cheap box for the job")
 
 ## Northbound API
 To get the data, create a API account
