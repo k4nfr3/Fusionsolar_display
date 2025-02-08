@@ -1,7 +1,8 @@
-# Little Raspberry Pi to dsiplay Huawei FusionSolar Battery status and day stats
+# Little Raspberry Pi to display Huawei FusionSolar Battery status and day stats
 ![box](./waveshare_display.jpeg?raw=true "Little Raspberry Pi Zero + Waveshare 2´´13")
 
 ## Estimated price 23.- CHF
+Waveshare 2.13'' (48x23mm) 250x122 pixels BlackWhite
 Cost is around 25$
 I've found this one : [www.berrybase.ch](https://www.berrybase.ch/waveshare-2-13-e-paper-display-fuer-raspberry-pi-zero-5-punkt-touch-250-122-pixel-abs-gehaeuse)  
 
