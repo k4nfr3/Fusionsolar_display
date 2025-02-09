@@ -144,7 +144,7 @@ def epaper_booting():
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
 
     draw = ImageDraw.Draw(image)
-    draw.text((40, 10), 'No data yet', font=font24, fill=0)
+    draw.text((40, 10), 'Initialising . . .', font=font24, fill=0)
     draw.text((40, 40), time.strftime('%H:%M', time.localtime()), font=font24, fill=0)
     wlan0_ip = get_ip_address("wlan0")
     eth0_ip = get_ip_address("eth0")
@@ -158,7 +158,7 @@ def epaper_display(batt, power, day_power):
     logger.debug("epaper_display()")
     global last_batt # access variable
     epd = epd2in13_V4.EPD()
-    epd.Clear(0xFF)
+    #epd.Clear(0xFF)
     picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
     libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
 
@@ -186,7 +186,7 @@ def epaper_display(batt, power, day_power):
         draw.rectangle([(68, 6), (78, 44)], fill=0)
     if batt >= 95:
         draw.rectangle([(81, 6), (91, 44)], fill=0)
-    draw.text((125, 10), str(batt) + '%', font=font24, fill=0)
+    draw.text((125, 10), "{:.0f} %".format(batt), font=font24, fill=0)
     if ((last_batt != 0) and (last_batt < batt)):
         draw.text((145, 10), "-", font=font24, fill=0)
     elif ((last_batt != 0 ) and (last_batt > batt)):
