@@ -1,5 +1,5 @@
 # Little Raspberry Pi to display Huawei FusionSolar Battery status and day stats
-![box](./waveshare_display.jpeg?raw=true "Little Raspberry Pi Zero + Waveshare 2´´13")
+![box](./waveshare_display_with_boiler_sign.jpeg?raw=true "Little Raspberry Pi Zero + Waveshare 2´´13")
 
 ## Estimated price 23.- CHF
 Waveshare 2.13'' (48x23mm) 250x122 pixels BlackWhite
